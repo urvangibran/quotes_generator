@@ -1,0 +1,282 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #D5D5D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-height: 500px;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #FEFEFE;
+    border-top: 2px solid black;
+    border-radius: 4px;
+    color: black;
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    position: relative;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    background-color: #F5C519;
+    color: black;
+    padding: 7px 15px;
+    font-variant: small-caps;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f4d35e;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.quote {
+    border-left: 2px solid black;
+    padding-left: 14px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.quote::before,
+.quote::after {
+    content: '"';
+    margin: 0 5px;
+}
+
+.author {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.author-name {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.author-description {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.author-bio {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.author::before,
+.author::after {
+    content: "-";
+    margin: 0 5px;
+    font-weight: 100;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #555;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container-detail {
+    max-height: 500px;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    background-color: #FEFEFE;
+    border-top: 2px solid black;
+    border-radius: 4px;
+    color: black;
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    position: relative;
+}
+
+
+
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
