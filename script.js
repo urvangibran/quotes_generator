@@ -20,12 +20,13 @@ const removeLoadingSpinner = () => {
 
     }
 };
-
+let author_slug = ''
+const API_URL = 'https://api.quotable.io'
 const getQuote = async () => {
     showLoadingSpinner();
-    const API_URL = 'https://api.quotable.io'
     const response1 = await fetch(`${API_URL}/random`)
-    const data = await response1.json()
+    const { authorSlug, ...data } = await response1.json()
+    author_slug = authorSlug
     // const { authorSlug, ...quote } = await response1.json()
     try {
         quote_paragraph.textContent = data.content
@@ -40,10 +41,7 @@ const getQuote = async () => {
 
 const showDetail = async () => {
     showLoadingSpinner();
-    const API_URL = 'https://api.quotable.io';
-    const response1 = await fetch(`${API_URL}/random`);
-    const { authorSlug, ...quote } = await response1.json();
-    const response2 = await fetch(`${API_URL}/authors/slug/${authorSlug}`);
+    const response2 = await fetch(`${API_URL}/authors/slug/${author_slug}`);
     const author = await response2.json();
     try {
         show_detail.textContent = "Detail Author"
